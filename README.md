@@ -10,12 +10,19 @@ Este proyecto realizado durante la cursada de "Introducción a los Lenguajes de 
 El lenguaje utiliza sintaxis de tipo S-expression con las siguientes construcciones:
 
 | Forma                                 | Descripción               | Ejemplo                        |
+
 | `(let [v1 e1 ...] body...)`           | Ligaduras locales         | `(let [x 10] (+ x 5))`         |
+
 | `(if cond then else)`                 | Condicional               | `(if (&gt; x 0) 1 0)`          |
+
 | `(fn [params...] body...)`            | Funciones anónimas        | `(fn [x] (* x 2))`             |
+
 | `(defn name [params...] body...)`     | Definición de funciones   | `(defn sq [x] (* x x))`        |
+
 | `(sample dist)`                       | Muestreo de prior         | `(sample (normal 0 1))`        |
+
 | `(observe dist value)`                | Condicionamiento          | `(observe (normal mu 1) 2.3)`  |
+
 | `(primitive args...)`                 | Llamadas primitivas       | `(+ 1 2)`, `(* a b)`           |
 
 ### Distribuciones Soportadas
@@ -28,9 +35,13 @@ El lenguaje utiliza sintaxis de tipo S-expression con las siguientes construccio
 ## Algoritmos de Inferencia Implementados
 
 |Algoritmo                            |Función                               | Descripción                                      |
+
 | **Likelihood Weighting**            | `run_lw()`, `likelihood_weighting()` | Importance sampling con prior como proposal      |
+
 | **Sequential Monte Carlo**          | `run_smc()`                          | Particle filtering con resampling en observes    |
+
 | **Single-Site Metropolis-Hastings** | `single_site_mh()`                   | MCMC con propuestas de un solo sitio             |
+
 
 ## Arquitectura del Proyecto
 main.cpp
