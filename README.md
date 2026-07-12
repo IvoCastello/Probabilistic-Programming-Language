@@ -1,10 +1,11 @@
 # PPL-C++: Probabilistic Programming Language in C++
 
-Implementación en C++ de un lenguaje de programación probabilística basado en el libro **"An Introduction to Probabilistic Programming"** de van de Meent, Paige, Yang y Wood. Este proyecto demuestra los conceptos fundamentales de PPLs con un intérprete de estilo Lisp que soporta inferencia bayesiana mediante múltiples algoritmos de muestreo.
+Implementación en C++ de un lenguaje de programación probabilística basado en el libro **"An Introduction to Probabilistic Programming"** de van de Meent, Paige, Yang y Wood.
+Este proyecto realizado durante la cursada de "Introducción a los Lenguajes de Programación Probabilísticos" bajo el docente Javier Burroni demuestra los conceptos fundamentales de PPLs con un intérprete de estilo Lisp que soporta inferencia bayesiana mediante múltiples algoritmos de muestreo.
 
 ## Características del Lenguaje
 
-### Sintaxis (estilo Lisp)
+### Sintaxis
 El lenguaje utiliza sintaxis de tipo S-expression con las siguientes construcciones:
 
 | Forma                                 | Descripción               | Ejemplo                        |
@@ -31,6 +32,7 @@ El lenguaje utiliza sintaxis de tipo S-expression con las siguientes construccio
 | **Single-Site Metropolis-Hastings** | `single_site_mh()`                   | MCMC con propuestas de un solo sitio             |
 
 ## Arquitectura del Proyecto
+main.cpp
 ppl/
 expr.{h,cpp}          # Expresiones del lenguaje
 parser.{h,cpp}        # Parser de S-expressions
